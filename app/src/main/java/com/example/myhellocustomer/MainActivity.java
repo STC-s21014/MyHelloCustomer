@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btClear.setOnClickListener(listener);
 
         Button btliveclear = findViewById(R.id.btliveclear);
-        btClear.setOnClickListener(listener);
+        btliveclear.setOnClickListener(listener);
     }
 
     //リスナ・クラス　<=　イベントの監視
@@ -45,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
                     String inliveStr = inlive.getText().toString();
                     output.setText(inliveStr + "にお住いの" + inputStr + "さん、こんにちは！");
                     break;
+                case R.id.btliveclear:
+                    inlive.setText("");
+                    break;
                 case R.id.btClear:
                     input.setText("");
                     output.setText("");
                     break;
-                case R.id.btliveclear:
-                    inlive.setText("");
-                    break;
+
             }
         }
     }
